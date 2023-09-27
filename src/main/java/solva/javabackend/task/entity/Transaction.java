@@ -34,7 +34,7 @@ public class Transaction {
     @Column(name = "expenseCategory")
     private String expenseCategory;
 
-    @Column(name = "datetime")
+    @Column(name = "date_time")
     private LocalDateTime dateTime;
 
     @Column(name = "limit_exceeded")

@@ -10,10 +10,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "t_exchangerate")
+@Table(name = "exchange_rate")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class ExchangeRate {
 
     @Id
@@ -30,6 +28,12 @@ public class ExchangeRate {
     @Column(name = "previousCloseRate")
     private BigDecimal previousCloseRate;
 
+    @Column(name = "from_currency")
+    private String fromCurrency;
+
+    @Column(name = "to_currency")
+    private String toCurrency;
+
     @Column(name = "date")
     private LocalDate date;
 
@@ -39,5 +43,9 @@ public class ExchangeRate {
     public ExchangeRate(String fromCurrency, String toCurrency, BigDecimal rate) {
         this.currencyPair = fromCurrency + "/" +toCurrency;
         this.closeRate = rate;
+    }
+
+    public ExchangeRate() {
+
     }
 }

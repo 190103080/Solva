@@ -23,7 +23,7 @@ public class Limit {
     @Column(name = "expenseCategory")
     private String expenseCategory;
 
-    @Column(name = "expenseCategory")
+    @Column(name = "limitSum")
     private BigDecimal limitSum;
 
     @Column(name = "limitDatetime")

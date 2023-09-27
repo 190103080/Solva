@@ -14,6 +14,6 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
 
     List<Transaction> findByClientId(Long clientId);
     List<Transaction> findByClientIdAndExpenseCategory(Long clientId, String expenseCategory);
-    List<Transaction> findByDatetimeBetween(LocalDateTime startDate, LocalDateTime endDate);
+    List<Transaction> findByDateTimeBetween(LocalDateTime startDate, LocalDateTime endDate);
 
 }
