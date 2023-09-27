@@ -33,5 +33,11 @@ public class Limit {
     private String limitCurrencyShortname;
 
 
-
+    public Limit(Long clientId, String expenseCategory, BigDecimal limit, LocalDateTime now, String usd) {
+        this.clientId = clientId;
+        this.expenseCategory = expenseCategory;
+        this.limitSum = limit;
+        this.limitDatetime = now;
+        this.limitCurrencyShortname = usd;
+    }
 }
